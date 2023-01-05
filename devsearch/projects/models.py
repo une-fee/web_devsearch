@@ -23,6 +23,9 @@ class Project(models.Model): # by default autogenerate id(int - start with 1)
     def __str__(self):
         return self.title
 
+    class Meta:
+        ordering = ['created']
+
 
 class Review(models.Model):
     VOTE_TYPE = (
